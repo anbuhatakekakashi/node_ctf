@@ -73,15 +73,17 @@ if (cluster.isMaster) {
             if (err) {
                 console.log('[+] Scoreboard db doesnt exist, creating...');
                 var statement = "CREATE DATABASE IF NOT EXISTS `scoreboard` /*!40100 DEFAULT CHARACTER SET latin1 */; USE `scoreboard`; CREATE TABLE IF NOT EXISTS `boxes` ( `name` varchar(50) NOT NULL, `boxip` text NOT NULL, `info` text NOT NULL, `flag1` text NOT NULL, `flag2` text NOT NULL, `flag1points` text NOT NULL, `flag2points` text NOT NULL, `quest1` text NOT NULL, `quest2` text NOT NULL, `quest3` text NOT NULL, `answ1` text NOT NULL, `answ2` text NOT NULL, `answ3` text NOT NULL, `quest1points` text NOT NULL, `quest2points` text NOT NULL, `quest3points` text NOT NULL, `hint1` text NOT NULL, `hint2` text NOT NULL, `hint3` text NOT NULL, UNIQUE KEY `name` (`name`) ) ENGINE=MyISAM DEFAULT CHARSET=latin1; CREATE TABLE IF NOT EXISTS `server` ( `name` varchar(50) NOT NULL, `registration` text NOT NULL, `time` text NOT NULL, `news` longtext NOT NULL, `trivia` text NOT NULL, `flags` text NOT NULL, `logdata` longtext NOT NULL, UNIQUE KEY `name` (`name`) ) ENGINE=MyISAM DEFAULT CHARSET=latin1; INSERT INTO `server` (`name`, `registration`, `time`, `news`, `trivia`, `flags`,`logdata`) VALUES ('node_ctf', 'true', '', '', '', '', ''); CREATE TABLE IF NOT EXISTS `users` ( `name` varchar(50) NOT NULL, `hash` text NOT NULL, `cookie` varchar(220) NOT NULL, `cookieexp` text NOT NULL, `flags` text NOT NULL, `trivia` text NOT NULL, `avatarurl` text NOT NULL, `avatarcolor` text NOT NULL, `vmresets` text NOT NULL, UNIQUE KEY `name` (`name`) ) ENGINE=MyISAM DEFAULT CHARSET=latin1; INSERT INTO `users` (`name`, `hash`, `cookie`, `cookieexp`, `flags`, `trivia`, `avatarurl`, `avatarcolor`, `vmresets`) VALUES ('admin', '21232f297a57a5a743894a0e4a801fc3', '', '', '', '', 'static.js?file=boss.png', '#6a8e7f', '');";
-                console.log('[+] Checking/Creating db if not exists');
                 con.commit('UPDATE scoreboard.server SET logdata = ""');                         //Resets the log data every time the server is started
                 con.commit('UPDATE scoreboard.server SET news = '+mysql.escape('Welcome to Node_CTF!||||||||Home is where you submit flags||||||||Click targets to display all targets in grey/green if hacked||||||||Click scoreboard to display all the teams based on their scores||||||||Click your name to change your avatar/pass||||||||The side-bar to your right allows you to navigate quickly||||||||Admins may post news here||||||||Captured flags will also be displayed here||||||||'));
                 con.commit(statement);
                 con.end();
-                console.log('[+] DB created.');
             } else {
+                con.commit('UPDATE scoreboard.server SET logdata = ""');                         //Resets the log data every time the server is started
+                con.commit('UPDATE scoreboard.server SET news = '+mysql.escape('Welcome to Node_CTF!||||||||Home is where you submit flags||||||||Click targets to display all targets in grey/green if hacked||||||||Click scoreboard to display all the teams based on their scores||||||||Click your name to change your avatar/pass||||||||The side-bar to your right allows you to navigate quickly||||||||Admins may post news here||||||||Captured flags will also be displayed here||||||||'));
+                con.end();
                 console.log('[+] Scoreboard db exists, moving on...');
             }
+            
         });
         con.on('error', function(err) {      
             // do nothing, just move on
