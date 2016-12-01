@@ -23,7 +23,6 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 1. Install</br>
 2. cd to root dir</br>
 3. run "node app.js"</br>
-4. Default creds are admin/admin. Change this asap
 
 #INSTALLATION
 1. Download JUST the file name NODE_CTFv1-3_fin.7z located in this repo.</br>
@@ -45,6 +44,11 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 4. Change lines 42-45 with your database info</br>
 5. run it using "node app.js"</br>
 6. That should be it!</br>
+
+#IMPORTANT
+1. Default creds are admin/admin. Change this asap
+2. Be careful who has access to the admin account. There is minimal input filtering for admin as of right now though regular users should be fairly locked down. Ex - Admin is the only one with access to post custom messages to the news feed. script tags etc...
+3. Other than that, should be fairly secure. If you find any issues, please email me at admin (at) hackitlab . com
 
 #SCREENSHOTS
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/node.PNG?raw=true "ScreenShot")
