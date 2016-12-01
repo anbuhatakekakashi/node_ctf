@@ -12,7 +12,7 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 4. Nav panel</br>
 5. Targets Panel which displays a root and limited flag. Changes colors on capturing flags</br>
 6. Leader Scoreboard (of course!)</br>
-7. News feed ticker (lets you know what other people are up to and allows admins to send messages)</br>
+7. News feed ticker ( collapses on click)  (lets you know what other people are up to and allows admins to send messages)</br>
 8. Custom Avatars and coloring for team/user profiles.</br>
 9. Account management Panel</br>
 10. Admin Panel for managing users, creating flags, sending news to everyone, downloading log data</br>
