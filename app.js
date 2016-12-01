@@ -80,7 +80,7 @@ if (cluster.isMaster) {
                 con.end();
                 console.log('[+] DB created.');
             } else {
-                console.log('[+] Scoreboard exists, moving on...');
+                console.log('[+] Scoreboard db exists, moving on...');
             }
         });
         con.on('error', function(err) {      
