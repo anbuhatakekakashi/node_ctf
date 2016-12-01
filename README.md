@@ -23,6 +23,7 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 1. Install</br>
 2. cd to root dir</br>
 3. run "node app.js"</br>
+4. Default creds are admin/admin. Change this asap
 
 #INSTALLATION
 1. Download JUST the file name NODE_CTFv1-3_fin.7z located in this repo.</br>
