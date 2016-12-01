@@ -16,7 +16,7 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 8. Custom Avatars and coloring for team/user profiles.</br>
 9. Account management Panel</br>
 10. Admin Panel for managing users, creating flags, sending news to everyone, downloading log data</br>
-11. LOGGING (optional - off by default) ! It is a hacking ctf scoreboard after all. This way you can keep and eye on an suspicious activity against the site.</br>
+11. LOGGING (optional - off by default) ! It is a hacking ctf scoreboard after all. This way you can keep an eye on an suspicious activity against the site.</br>
 12. Efficiency - NODE_CTF uses clustering and sql pooling to increase performance and handle large loads
 
 #HOW TO RUN
