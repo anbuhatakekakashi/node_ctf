@@ -642,7 +642,7 @@ if (cluster.isMaster) {
                     } else {
                         mysql_query("SELECT registration FROM server", function(rows){
                             if (rows[0].registration === 'true') {
-                                if (req.body.name.length > 3 && req.body.name.match(/^(?:\w|\_)+$/g) !== null && req.body.password.match(/^(?:\w|\S)+$/g) !== null && req.body.password.length > 7 && req.body.imgurl && req.body.imgcolor) {
+                                if (req.body.name.length > 3 && req.body.name.match(/^(?:\w|\_)+$/g) !== null && req.body.password.match(/^(?:\w|\S)+$/g) !== null && req.body.password.length > 7 && req.body.imgurl && req.body.imgcolor && req.body.imgcolor.match(/^\#\w+?$/g) !== null && req.body.imgurl.match(/^static\.js\?file\=icons\/(?:\w|\-|\_|\d)+?\.\w\w?\w?\w?$/g) !== null ) {
                                     mysql_query("SELECT name FROM users WHERE name = "+ mysql.escape(req.body.name), function (rows){
                                         if (rows[0]){
                                             res.send('That username is already taken!');
