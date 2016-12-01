@@ -47,6 +47,7 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 #SCREENSHOTS
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/node.PNG?raw=true "ScreenShot")
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/admin.PNG?raw=true "ScreenShot")
+![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/targets.PNG?raw=true "ScreenShot")
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/home.PNG?raw=true "ScreenShot")
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/score.PNG?raw=true "ScreenShot")
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/register.PNG?raw=true "ScreenShot")
