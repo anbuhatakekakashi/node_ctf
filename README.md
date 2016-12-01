@@ -1,5 +1,5 @@
 # NODE_CTF
-<div style="text-align:center">![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/new.gif?raw=true "ScreenShot")</div>
+![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/new.gif?raw=true "ScreenShot")
 
 NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , node, and express. However, this could be used for any type of ctf as it allows generic questions and answers to be put in along with questions/hints.
 
