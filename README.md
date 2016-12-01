@@ -1,4 +1,4 @@
-# NODE_CTF - A node/express js CTF light-weight scoreboard
+# NODE_CTF - A Node/Express JS CTF Scoreboard
 
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/new.gif?raw=true "ScreenShot")
 
