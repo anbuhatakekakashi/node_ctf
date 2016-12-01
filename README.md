@@ -6,10 +6,10 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 1. Download zip.</br>
 2. Go to the directory containing app.zip</br>
 3. Run npm install on the following:</br>
-&nbspcluster</br>
-&nbsp&nbspexpress</br>
-&nbsp&nbspmysql</br>
-&nbsp&nbspmd5</br>
-&nbsp&nbspcookie-parser</br>
-&nbsp&nbspbody-parser</br>
+  cluster</br>
+  express</br>
+  mysql</br>
+  md5</br>
+  cookie-parser</br>
+  body-parser</br>
 
