@@ -1,5 +1,5 @@
 # NODE_CTF - A Node/Express JS CTF Scoreboard
-
+# Made with node v6.9.1
 ![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/new.gif?raw=true "ScreenShot")
 
 NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , node, and express. However, this could be used for any type of ctf as it allows generic questions and answers to be put in along with questions/hints. I created this because I felt like I couldn't find any CTF scoreboard that fit my needs. I also did this to learn node a bit better and took me about 6 days. Enjoy!
