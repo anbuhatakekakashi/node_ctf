@@ -32,6 +32,8 @@ Made with node v6.9.1 and tested in Windows 7 / 8</br>
 5. run it using "node app.js"</br>
 6. That should be it!</br>
 
+7. IF you want to enable SSL (https) you will need to generate some keys and place them in the certs folder. Then change line 48 to true and change lines 54 - 58 to your cert paths.
+
 #ALT INSTALLATION METHOD
 1. Download.</br>
 2. Go to the directory containing app.js</br>
