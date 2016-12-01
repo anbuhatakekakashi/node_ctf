@@ -1,0 +1,237 @@
+/*Licensed Under: GNU GENERAL PUBLIC LICENSE / https://www.gnu.org/licenses/gpl-3.0.en.html*/
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Share Tech Mono'), local('ShareTechMono-Regular'), url(static.js?file=RQxK-3RA0Lnf3gnnnNrAsYdJ2JT0J65PSe7wdxAnx_I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+h1 {
+    text-align: center;
+}
+.block {
+  background: green;
+  height: 100px;
+  width: 100px;
+  display:inline-block;
+  margin: 10px;
+}
+.touter {
+  text-align: center;
+  position: relative;
+  font-family: 'Share Tech Mono';
+  vertical-align:top;
+  height: 170px;
+  width: 120px;
+  display:inline-block;
+  margin: 3%;
+  min-height: 100px;
+  min-width: 100px;
+}
+.touter text {
+  font-size: 18px;
+}
+.touter p {
+  position: absolute; 
+  bottom: 0; 
+  right: 0; 
+  left: 0;
+  font-size: 10px;
+}
+.bgraphcontainer {
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.bargraph {
+  color: white; 
+  position: relative; 
+  border: 1px; 
+  border-style: solid;
+  height: 82px;
+  border-color: black; 
+  min-width: 82px;
+}
+.bargraph image {
+  width: 80px;
+  height: 80px;
+}
+.newsticker{
+  position: fixed; 
+  bottom: -18px; 
+  right: 0;
+  border-radius:5px;
+  border:2px solid;
+  border-color: white;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  color: black;
+  z-index: 5;
+  overflow: visible;
+}
+.tblock {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
+  position: absolute;
+  border: 1px solid;
+  border-color: black;
+  bottom: 0;
+  left: 0;
+  border-radius: 5%;
+  height: 120px;
+  width: 120px;
+  min-height: 100px;
+  min-width: 100px;
+}
+.tblock:hover {
+  transform: scale(1.1);
+}
+.tblockInner {
+  position: absolute;
+  border: 1px solid;
+  border-color: black;
+  border-radius: 5%;
+  height: 50%;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#newsup {
+  height: 29px;
+  position: absolute;
+  top: 0;
+  right:40px;
+  border-radius: 2px;
+  z-index: 8;
+  line-height: 9px;
+}
+#newsdown {
+  height: 29px;
+  line-height: 9px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  right: 2px;
+  z-index: 8;
+}
+#code {
+  position: fixed;
+  left: 10%;
+  top: 5px;
+  color: #0f0;
+  background-color: black; 
+  font-size: 12pt;
+  padding: 8px 12px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  z-index: -1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;  
+    -khtml-user-select: none;   
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none; 
+  }
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.9); /* semi-transparent background */
+        text-align: center;
+        display: none; /* hide this by default */
+    }
+    #mainboard h1 {
+        text-align: left;
+    }
+    #targetsboard h1 {
+        font-family: 'Share Tech Mono';
+        font-size: 50px;
+    }
+    #scoreboard h1 {
+        font-family: 'Share Tech Mono';
+        font-size: 50px;
+    }
+    .overlay iframe {
+        margin: 30px auto;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 10%;
+        height: 80%;
+        width: 70%;
+        border-radius: 20px;
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 10px #9ecaed;
+    }
+    #newsHeader{
+      position: fixed; 
+      bottom: 147px; 
+      right: 0px; 
+      z-index: 6;
+      height: 30px;
+      width: 600px;
+      padding: 0px;
+      line-height: 10px;
+      border-radius: 5px;
+      -moz-box-shadow: 0 0 10px #000;
+      -webkit-box-shadow: 0 0 10px #000;
+      box-shadow: 0 0 10px #000;
+    }
+    .panel-heading {
+      height: 10px;
+      z-index: 7;
+      text-align: center;
+      padding: 15px;
+      line-height: 5px;
+      border-radius: 5px;
+    }
+    .panel-heading h4 {
+      z-index: 7;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: -15px;
+      padding: 0px;
+      line-height: 10px;
+    }
+
+.bargraph:hover {
+    
+}
+
+.bargraph:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    
+}
+
+.bargraph:hover:after {
+    width: 100%;
+    background-color: rgba(255,255,255,0);
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
