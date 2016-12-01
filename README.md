@@ -43,3 +43,11 @@ NODE_CTF is a CTF scoreboard for more offensive based CTF's. This uses jquery , 
 4. Change lines 42-45 with your database info</br>
 5. run it using "node app.js"</br>
 6. That should be it!</br>
+
+#SCREENSHOTS
+![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/node.PNG?raw=true "ScreenShot")
+![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/admin.PNG?raw=true "ScreenShot")
+![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/home.PNG?raw=true "ScreenShot")
+![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/score.PNG?raw=true "ScreenShot")
+![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/register.PNG?raw=true "ScreenShot")
+
