@@ -1,0 +1,460 @@
+<html>
+<head>
+    <!--NODE_CTF - GNU General Public License -->
+	<script src="static.js?file=jquery.min.js"></script>
+</head>
+<style>
+body{
+background: black;
+font-family: 'Share Tech Mono';
+}
+@import "compass/css3";
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Share Tech Mono'), local('ShareTechMono-Regular'), url(static.js?file=RQxK-3RA0Lnf3gnnnNrAsYdJ2JT0J65PSe7wdxAnx_I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+  #code {
+    position: fixed;
+    left: -1%;
+    top: -1%;
+    color: #0f0;
+    background-color: black; 
+    font-size: 12pt;
+    padding: 8px 12px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    z-index: -1;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;  
+      -khtml-user-select: none;   
+      -moz-user-select: none;     
+      -ms-user-select: none;      
+      user-select: none; 
+  }
+svg{
+  width: 40%;
+  height: 20%;
+  display: block;
+  position: fixed;
+  left: 0px;
+  top: 0;
+  right: 0px;
+  overflow: hidden; 
+  margin: 0 auto;
+  background: black;
+  z-index: -1;
+}
+.regContent {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+#globalContainer{
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+::-webkit-input-placeholder { font-family: 'Share Tech Mono';}
+::-moz-placeholder { font-family: 'Share Tech Mono';} /* firefox 19+ */
+:-ms-input-placeholder { font-family: 'Share Tech Mono';} /* ie */
+input:-moz-placeholder { font-family: 'Share Tech Mono';}
+input{
+font-family: 'Share Tech Mono';
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+textarea {
+    width: 80%;
+    max-width: 80%;
+}
+textarea:focus {
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+#gallery {
+    vertical-align: top; 
+    border-radius: 2%;
+    position: relative;
+    height: 99%;
+    width: 99%;
+    left: .5%;
+    top:.5%;
+    border-color: grey; 
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    display: inline-block; 
+    position: relative; 
+}
+
+.galleryImages {
+    vertical-align: top; 
+    border-radius: 2%; 
+    overflow: hidden; 
+    display: inline-block; 
+    position: relative;
+    word-wrap: break-word; 
+    max-width: 80px;
+    max-width: 80px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    border:2px solid;
+    border-color: white;
+    border-radius:20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:5;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.background {
+    width:100%;
+    height:100%;
+    z-index:2;
+    position:fixed;
+    border-radius: 20px;
+    top: 25%;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px #9ecaed;
+    border-radius:20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:10;
+    overflow:hidden; 
+    display: flex;
+    margin: auto;
+    text-align:center;
+}
+
+.inner1{
+    width:100%;
+    height: 100%;
+    border-right:1px solid;
+    border-color: white;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+.buttons{
+	position: relative;
+	border-radius: 5%;
+	font-family: 'Share Tech Mono';
+}
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#listusers {
+    width: 80%;
+    left: 10%;
+    position: relative;
+    max-width: 80%;
+}
+#targetlistdiv{
+    width: 80%;
+    left: 10%;
+    position: relative;
+    max-width: 80%;
+}
+</style>
+
+<body>
+
+
+<div id="globalContainer">
+<div style="overflow:hidden; max-height: inherit; z-index: -10; max-width: inherit; word-wrap: break-word;" id="code"></div>
+        <div class="background"></div>
+            <div class="mask">
+                <div class="inner1">
+                    <h1>Administration Panel</h1>
+                    <hr class="style-two">
+                    <!--Listes all current users -->
+                    <h2>Current Logins</h2>
+                    <p>Click Avatar for Prompt to Delete</p>
+                    <div style="font-size: 16px;" id="listusers"></div>
+                    <p id="deluserResults"></p>
+                    <hr class="style-two">
+                    <!--Create a new user -->
+                    <h2>Create Login</h2>
+                    <input placeholder="user/team name" id="newusername" class="regContent"/></br>
+                    <button class="buttons" id="newuserbutton" class="regContent">Submit</button></br>
+                    <p style="font-size: 16px;" id="createuserresults">-</p>
+                    <hr class="style-two">
+                    <!--Send news to the news ticker-->
+                    <h2>Send News</h2>
+                    <input placeholder="Message" id="newsinput" class="regContent"/></br>
+                    <button class="buttons" id="newsbutton" class="regContent">Send</button></br>
+                    <div style="font-size: 16px;" id="newsresults"></div>
+                    <hr class="style-two">
+                    <!--Retrieve Log Data -->
+                    <h2>Log Data</h2>
+                    <button onclick="Download('/node_ctf.logdata');" class="buttons">Download</button>
+                    <iframe id="theiframe" style="display:none;"></iframe>
+                    <hr class="style-two">
+                    <!--Toggle registration-->
+                    <h2 id="registrationheader">Registration</h2>
+                    <button class="buttons" id="registrationbutton" class="regContent"></button></br>
+                    <div style="font-size: 16px;" id=""></div>
+                    <hr class="style-two">
+                    <!--Shows small list of all targets-->
+                    <h2>Current Targets</h2>
+                    <p>Click for Prompt to Delete</p>
+                    <div style="font-size: 16px;" id="targetlistdiv"></div>
+                    <hr class="style-two">
+                    <!--Create a new target-->
+                    <h2>Create New Target</h2>
+                    <input placeholder="Target Name" id="targetname" class="regContent" /></br></br>
+                    <input placeholder="Target IP address" id="targetip" class="regContent"/></br></br>
+                    <textarea placeholder="Target Info (recommended to put at least a sentence)" id="targetinfo" class="regContent"></textarea></br></br>
+                    <input placeholder="Limited Flag" id="targetflag1" class="regContent"/></br></br>
+                    <input onkeypress='return validateQty(event);' placeholder="Limited Flag Points" id="targetflag1points" class="regContent"/></br></br>
+                    <input placeholder="Root Flag" id="targetflag2" class="regContent"/></br></br>
+                    <input onkeypress='return validateQty(event);' placeholder="Root Flag Points" id="targetflag2points" class="regContent"/></br></br>
+                    <textarea placeholder="Trivia Question 1" id="question1" class="regContent"></textarea></br></br>
+                    <textarea placeholder="Trivia Answer 1" id="answer1" class="regContent"></textarea></br></br>
+                    <textarea placeholder="Hint 1" id="hint1" class="regContent"></textarea></br></br>
+                    <input onkeypress='return validateQty(event);' placeholder="Trivia 1 Points" id="question1points" class="regContent"/></br></br>
+                    <textarea placeholder="Trivia Question 2" id="question2" class="regContent"></textarea></br></br>
+                    <textarea placeholder="Trivia Answer 2" id="answer2" class="regContent"></textarea></br></br>
+                    <textarea placeholder="Hint 2" id="hint2" class="regContent"></textarea></br></br>
+                    <input onkeypress='return validateQty(event);' placeholder="Trivia 2 Points" id="question2points" class="regContent"/></br></br>
+                    <textarea placeholder="Trivia Question 3" id="question3" class="regContent"></textarea></br></br>
+                    <textarea placeholder="Trivia Answer 3" id="answer3" class="regContent"></textarea></br></br>
+                    <textarea placeholder="Hint 3" id="hint3" class="regContent"></textarea></br></br>
+                    <input onkeypress='return validateQty(event);' placeholder="Trivia 3 Points" id="question3points" class="regContent"/></br></br>
+                    <button class="buttons" id="targetcreatebutton" class="regContent">Submit</button></br></br>
+                    <p style="font-size: 24px;" id="targetcreateresults">-</p>
+                </div>
+            </div>
+        <div class="content"></div>
+</div>
+
+<script>
+function Download(url) {
+    document.getElementById('theiframe').src = url;
+};
+</script>
+
+<script>
+
+function register() {
+    $.post("api.js", {registerstatus: "registerstatus"}, function(result) {
+        $("#registrationheader").text("Registration Status: " + result);
+        if (result === 'On') {
+            $("#registrationbutton").text("Toggle Off?");
+        } else {
+            $("#registrationbutton").text("Toggle On?");
+        }
+    });
+};
+
+function userGallery(){
+    $.post("api.js", {usergallery: "usergallery"}, function(result) {
+        $("#listusers").html(result);
+    });
+};
+
+$("#registrationbutton").click(function(){
+    $.post("api.js", {toggleregistration: "toggleregistration"}, function(result) {
+        register();
+    });
+});
+
+function deluser(username){
+    if (confirm('Delete user "' +username + '"?')) {
+        if (confirm('Are you absolutely sure?')) {
+            $.post("api.js", {deleteuser: username}, function(result) {
+                $("#deluserResults").text(result);
+                if (result === 'The user has been deleted!') {
+                    userGallery();
+                }
+            });
+        } else {
+            // Still do nothing!
+        }
+    } else {
+        // Do nothing!
+    }
+};
+
+function deltarget(boxname){
+    if (confirm('Delete target "' +boxname + '"?')) {
+        if (confirm('Are you absolutely sure?')) {
+            $.post("api.js", {deletebox: boxname}, function(result) {
+                $("#deluserResults").text(result);
+                if (result === 'The target has been deleted!') {
+                    boxgrabber();
+                }
+            });
+        } else {
+            // Still do nothing!
+        }
+    } else {
+        // Do nothing!
+    }
+};
+
+//This lists all of the current boxes and displays them in the admin panel
+function boxgrabber() {
+    $.post("api.js", {targetgallery: "small"}, function(result) {
+        $("#targetlistdiv").html(result);
+    });
+};
+
+$("#targetcreatebutton").click(function(){
+    var tname = $("#targetname").val();
+    var tip = $("#targetip").val();
+    var tinfo = $("#targetinfo").val();
+    var tflag1 = $("#targetflag1").val();
+    var tflag1points = $("#targetflag1points").val();
+    var tflag2 = $("#targetflag2").val();
+    var tflag2points = $("#targetflag2points").val();
+    var tquest1 = $("#question1").val();
+    var tansw1 = $("#answer1").val();
+    var thint1 = $("#hint1").val();
+    var tquest1points = $("#question1points").val();
+    var tquest2 = $("#question2").val();
+    var tansw2 = $("#answer2").val();
+    var thint2 = $("#hint2").val();
+    var tquest2points = $("#question2points").val();
+    var tquest3 = $("#question3").val();
+    var tansw3 = $("#answer3").val();
+    var thint3 = $("#hint3").val();
+    var tquest3points = $("#question3points").val();
+    if (tname && tip && tinfo && tflag1 && tflag1points && tflag2 && tflag2points && tquest1 && tansw1 && tquest1points && tquest2 && tansw2 && tquest2points && tquest3 && tansw3 && tquest3points && thint3 && thint2 && thint1) {
+        $.post("api.js", {targetcreate: 'targetcreate', targetname: tname, targetip: tip,  targetinfo: tinfo, targetflag1: tflag1, targetflag1points: tflag1points, targetflag2: tflag2, targetflag2points: tflag2points, targetquestion1: tquest1, targetanswer1: tansw1, targetquestion1points: tquest1points, targetquestion2: tquest2, targetanswer2: tansw2, targetquestion2points: tquest2points, targetquestion3: tquest3, targetanswer3: tansw3, targetquestion3points: tquest3points, targethint3: thint3, targethint2: thint2, targethint1: thint1}, function(result) {
+            $("#targetcreateresults").text(result);
+            $("#targetcreateresults").delay(4000).queue(function(n) {$('#targetcreateresults').text('-'); n();});
+            var tmp = result.search('Target added to the scoreboard!');
+            if (tmp !== -1) {
+                boxgrabber();
+            }
+        });
+    } else {
+        $('#targetcreateresults').text('You have to input all of the values!');
+        $("#targetcreateresults").delay(4000).queue(function(n) {$('#targetcreateresults').text('-'); n();});
+    }
+});
+
+
+$('#newuserbutton').click( function() {
+	var uname = $('#newusername').val();
+    if (uname) {
+        $.post("api.js", {teamCreate: "teamCreate", name: uname}, function(result) {
+            $('#createuserresults').text(result);
+            var tmp = result.search('has been created!');
+            if (tmp === -1) {
+                //do nothing because it did not match for a user being created
+            } else {
+                userGallery();
+            }
+        });
+    } else {
+        $('#createuserresults').text('You must enter a username!');
+        $("#createuserresults").delay(3000).queue(function(n) {$('#results').text('-'); n();});
+    }
+});
+
+function validateQty(event) {
+    var key = window.event ? event.keyCode : event.which;
+
+if (event.keyCode == 8 || event.keyCode == 46
+ || event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 9) {
+    return true;
+}
+else if ( key < 48 || key > 57 ) {
+    return false;
+}
+else return true;
+};
+
+
+
+$('#newsbutton').click(function(){
+    if ($('#newsinput').val().length > 65) {
+        $("#newsresults").text('Your message cannot be longer than 60 characters and yours was: ' + $('#newsinput').val().length + ' characters');
+        setTimeout(function() {
+            $("#newsresults").text('');
+        }, 4000);
+    } else if ($('#newsinput').val()) {
+        $.post("api.js", {updatenews: $('#newsinput').val()}, function(result) {
+            $("#newsresults").text(result);
+            setTimeout(function() {
+                $("#newsresults").text('');
+            }, 4000);
+        });
+    } else {
+        $("#newsresults").text('You must enter in some news to send!');
+        setTimeout(function() {
+            $("#newsresults").text('');
+        }, 4000);
+    }
+});
+
+/*
+$.post("api.js", {gallery: "gallery"}, function(result) {
+    $("#inner2").html(result);
+});
+*/
+
+var digit,
+    maxDigits = 400,
+    randomize = function() {
+        return Math.floor(Math.random() + 0.5);
+    },
+    codeArea = document.getElementById("code"),
+    generate = function(e) {
+        // replace old result with one digit
+        codeArea.innerHTML = randomize();
+        var tmp = ''
+            // then generate the rest of the digits
+        for (var i = 1; i < maxDigits; ++i) {
+            digit = randomize();
+            tmp += digit;
+        }
+        codeArea.innerHTML += tmp.repeat(200)
+    };
+generate();
+register();
+userGallery();
+boxgrabber();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!--NODE_CTF - GNU General Public License -->
+<!-- This is the main target option -->
+<div style="width: 90%; left: 5%; top:10%;" class="col-sm-6">
+    <p id="TARGETSIDGOESHERE"></p></br>
+    <h1>TARGETSNAMEANDIPGOESHERE</h1>
+    <p>
+        TARGETSINFOGOESHERE
+    </p>
+    <div class="input-group text-center" style="position: relative;" id="LIMITEDFLAGCONTAINER" >
+        <input type="text" class="form-control input-lg" title="Once you gain a limited shell, look around for limited flag and submit here" placeholder="Limited Flag" id="LIMITEDFLAGID">
+        <span class="input-group-btn"><button class="btn btn-lg btn-primary limitedflagsubmit" type="button" id="LIMITEDFLAGBUTTONID">SUBMIT</button></span>
+    </div>
+    <div class="input-group text-center" style="position: relative;" id="ROOTFLAGCONTAINER">
+        <input type="text" class="form-control input-lg" title="Once you gain privileges, find the root flag and submit it here!" placeholder="Root Flag" id="ROOTFLAGID">
+        <span class="input-group-btn"><button class="btn btn-lg btn-primary rootflagsubmit" type="button" id="ROOTFLAGBUTTONID">SUBMIT</button></span>
+    </div>
+</div><!--/col-6-->
+
+<!-- THIS SETS SOME PADDING-->
+<div style="position: relative; width: 90%; left: 5%; height: 25px;" class="col-sm-6">
+</div>
+
+<!--  THis begins the hint Section -->
+<div style="position: relative; width: 90%; left: 5%;" class="col-sm-6">
+    <div class="panel panel-default">
+        <div style="background-color: #f7f7f7;" class="panel-heading"><a href="#" class="pull-right"></a> <h4 title="Answer the question and get a hint!">Questions/Hints</h4></div>
+        <div class="panel-body">
+        
+            <ul style="display: table; margin: 0 auto;" class="nav nav-tabs">
+            <li class="active"><a href="#QUEST1A" data-toggle="tab">Question/Hint 1</a></li>
+            <li><a href="#QUEST1B" data-toggle="tab">Question/Hint 2</a></li>
+            <li><a href="#QUEST1C" data-toggle="tab">Question/Hint 3</a></li>
+            </ul>
+            <div class="tabbable">
+            <div class="tab-content">
+                <div class="tab-pane active" id="QUEST1TOGGLEA">
+                <div class="well well-sm">
+                  <pre id="TARGETQUESTION1PREID">TARGETQUESTION1GOESHERE</pre>
+                  <input style="width: 100%;" placeholder="Answer?" id="TARGETQUEST1INPUT" title="Answer the question and get a hint!"></input>
+                  </br></br>
+                  <div style="text-align: center;" ><button class="btn btn-primary question1submit" id="TARGETQUEST1SUBMIT">Submit</button></br><p style="text-align: center;" id="TARGETHINT1"></p></div></br>
+                </div>
+                </div>
+                <div class="tab-pane" id="QUEST1TOGGLEB">
+                <div class="well well-sm">
+                  <pre id="TARGETQUESTION2PREID">TARGETQUESTION2GOESHERE</pre>
+                  <input style="width: 100%;" placeholder="Answer?" id="TARGETQUEST2INPUT" title="Answer the question and get a hint!"></input>
+                  </br></br>
+                  <div style="text-align: center;" ><button class="btn btn-primary question2submit" id="TARGETQUEST2SUBMIT" >Submit</button></br><p style="text-align: center;" id="TARGETHINT2"></p></div></br>
+                </div>
+                </div>
+                <div class="tab-pane" id="QUEST1TOGGLEC">
+                <div class="well well-sm">
+                  <pre id="TARGETQUESTION3PREID">TARGETQUESTION3GOESHERE</pre>
+                  <input style="width: 100%;" placeholder="Answer?" id="TARGETQUEST3INPUT" title="Answer the question and get a hint!"></input>
+                  </br></br>
+                  <div style="text-align: center;" ><button class="btn btn-primary question3submit" id="TARGETQUEST3SUBMIT" >Submit</button></br><p style="text-align: center;" id="TARGETHINT3"></p></div></br>
+                </div>
+                </div>
+            </div>
+            </div> <!-- /tabbable -->
+        </div><!--/panel-body-->
+    </div> <!--/panel-->
+</div><!--/col-6 ==========END OF TARGET-->
