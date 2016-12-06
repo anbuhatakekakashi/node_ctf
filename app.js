@@ -271,7 +271,7 @@ if (cluster.isMaster) {
             mysql_query("SELECT name,flags,trivia,avatarurl,avatarcolor FROM users",function (rows){
                 mysql_query("SELECT flag1points,flag2points,quest1points,quest2points,quest3points,name FROM boxes", function(rows2){
                         if (!rows[0].flags && !rows[0].trivia) {
-                            res.send('<h1>Scoreboard</h1><div style="height: 1400px; width: 1400px;"</div>');
+                            res.send('<h1>Scoreboard</h1><div style="height: 1400px; width: 100%;"</div>');
                             return;
                         } else {
                             var tmp = {};
@@ -775,12 +775,12 @@ if (cluster.isMaster) {
                         }
                     } else {
                         //var notargets = fs.readFileSync('./html/svg-notargets.html', 'utf-8');
-                        res.send(base64.encode(("<div style='position: relative; width: 1400px; height: 1400px;'></div>")));
+                        res.send(base64.encode(("<div style='position: relative; width: 100%; height: 1400px;'></div>")));
                     }
                 });
             } catch (err) {
                 console.log(err);
-                res.send(base64.encode(("<div style='position: relative; width: 1400px; height: 1400px;'></div>")));
+                res.send(base64.encode(("<div style='position: relative; width: 100%; height: 1400px;'></div>")));
             }
         };
 
@@ -836,32 +836,32 @@ if (cluster.isMaster) {
                                             tmp += '<div onclick="exploder(this.id)" class="touter" id="'+rows[e].name + '-touter'+'"><text>'+rows[e].name+'</text></br>'+rows[e].boxip+'<div style="background-color: rgba(128, 255, 128, 0.7);" class="tblock"><div style="background-color: rgba(128, 255, 128, 0.7);" class="tblockInner">Root<p>'+rows[e].flag2points+' pts</p></div>Limited<p>'+rows[e].flag1points+' pts</p></div></div>'
                                             if (parseInt(rows.length - 1) === parseInt(e)) {
                                                 //var svg = fs.readFileSync('./svg.html', 'utf-8');
-                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 1400px; height: 1400px;'></div>");
+                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 100%; height: 1400px;'></div>");
                                             }
                                         } else if (thejson[rows[e].name].flag1 === "False" && thejson[rows[e].name].flag2 === "False" ) {
                                             tmp += '<div onclick="exploder(this.id)" class="touter" id="'+rows[e].name + '-touter'+'"><text>'+rows[e].name+'</text></br>'+rows[e].boxip+'<div style="background-color: rgba(211,211,211, 0.7);" class="tblock"><div style="background-color: rgba(211,211,211, 0.8);" class="tblockInner">Root<p>'+rows[e].flag2points+' pts</p></div>Limited<p>'+rows[e].flag1points+' pts</p></div></div>'
                                             if (parseInt(rows.length - 1) === parseInt(e)) {
                                                 //var svg = fs.readFileSync('./svg.html', 'utf-8');
-                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 1400px; height: 1400px;'></div>");
+                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 100%; height: 1400px;'></div>");
                                             }
                                         } else if (thejson[rows[e].name].flag1 === "True" && thejson[rows[e].name].flag2 === "False" ) {
                                             tmp += '<div onclick="exploder(this.id)" class="touter" id="'+rows[e].name + '-touter'+'"><text>'+rows[e].name+'</text></br>'+rows[e].boxip+'<div style="background-color: rgba(128, 255, 128, 0.7);"  class="tblock"><div style="background-color: rgba(211,211,211, 0.8);" class="tblockInner">Root<p>'+rows[e].flag2points+' pts</p></div>Limited<p>'+rows[e].flag1points+' pts</p></div></div>'
                                             if (parseInt(rows.length - 1) === parseInt(e)) {
                                                 //var svg = fs.readFileSync('./svg.html', 'utf-8');
-                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 1400px; height: 1400px;'></div>");
+                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 100%; height: 1400px;'></div>");
                                             }
                                         } else if (thejson[rows[e].name].flag1 === "False" && thejson[rows[e].name].flag2 === "True" ) {
                                             tmp += '<div onclick="exploder(this.id)" class="touter" id="'+rows[e].name + '-touter'+'"><text>'+rows[e].name+'</text></br>'+rows[e].boxip+'<div style="background-color: rgba(211,211,211, 0.7);" class="tblock"><div style="background-color: rgba(128, 255, 128, 0.7);"  class="tblockInner">Root<p>'+rows[e].flag2points+' pts</p></div>Limited<p>'+rows[e].flag1points+' pts</p></div></div>'
                                             if (parseInt(rows.length - 1) === parseInt(e)) {
                                                 //var svg = fs.readFileSync('./svg.html', 'utf-8');
-                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 1400px; height: 1400px;'></div>");
+                                                res.send('<h1>Targets</h1>' + tmp+  "<script>strober(5);</script><div style='position: relative; width: 100%; height: 1400px;'></div>");
                                             }
                                         }
                                     }
                                     
                                 }
                             } else {
-                                res.send("<h1>Targets</h1><div style='position: relative; width: 1400px; height: 1400px;'></div>");
+                                res.send("<h1>Targets</h1><div style='position: relative; width: 100%; height: 1400px;'></div>");
                             }
                         }); 
                     });
@@ -920,7 +920,7 @@ if (cluster.isMaster) {
                     }
                 } catch (err) {
                     console.log(err);
-                    res.send('<div style="width: 100%; height: 100%; background-color: white;"> err</div>');
+                    res.send('<div style="width: 100%; height: 1400px; background-color: white;"> err</div>');
                 }
             });
         };
