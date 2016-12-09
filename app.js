@@ -181,7 +181,7 @@ if (cluster.isMaster) {
         function userFlagsNtriviaPull(req, res){
             var username = req.cookies.SCORE.split('.')[0];
             mysql_query("SELECT flags,trivia,name FROM users WHERE name = " + mysql.escape(username), function(rows){
-                mysql_query("SELECT answ1,answ2,answ3,name FROM boxes", function(rows2){
+                mysql_query("SELECT hint1,hint2,hint3,name FROM boxes", function(rows2){
                     try {
                         if (rows[0] !== "") {
                             var tmp = rows[0];
