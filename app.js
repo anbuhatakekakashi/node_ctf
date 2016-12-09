@@ -270,7 +270,7 @@ if (cluster.isMaster) {
         function scoreboardDataGrabber(req, res){
             mysql_query("SELECT name,flags,trivia,avatarurl,avatarcolor FROM users",function (rows){
                 mysql_query("SELECT flag1points,flag2points,quest1points,quest2points,quest3points,name FROM boxes", function(rows2){
-                        if (!rows[0].flags && !rows[0].trivia) {
+                        if (!rows2[0]) {
                             res.send('<h1>Scoreboard</h1><div style="height: 1400px; width: 100%;"</div>');
                             return;
                         } else {
