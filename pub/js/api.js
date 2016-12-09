@@ -208,13 +208,13 @@ $.post("api.js", {flagsNtriviaRequest: "flagsNtriviaRequest"}, function(result) 
         });
         $.each(thetrivia, function (j, field2) {
             if (field2.question1 === "True") {
-                question1submitter(new Array(j,theanswers[j].answ1), false);
+                question1submitter(new Array(j,theanswers[j].hint1), false);
             }
             if (field2.question2 === "True") {
-                question2submitter(new Array(j,theanswers[j].answ2), false);
+                question2submitter(new Array(j,theanswers[j].hint2), false);
             }
             if (field2.question3 === "True") {
-                question3Submitter(new Array(j,theanswers[j].answ3), false);
+                question3Submitter(new Array(j,theanswers[j].hint3), false);
             }
         });
     }
