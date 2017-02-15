@@ -651,7 +651,7 @@ if (cluster.isMaster) {
                                         hash += possible.charAt(Math.floor(Math.random() * possible.length));
                                     }
                                     mysql_query("SELECT flags,trivia FROM users WHERE name = 'admin'", function (rows) {
-                                        mysql_commit("INSERT into USERS (name, hash, avatarurl, avatarcolor, flags, trivia, vmresets, cookie, cookieexp) VALUES ("+mysql.escape(req.body.name)+" , "+mysql.escape(md5(hash))+" , "+mysql.escape('static.js?file=question-mark.png')+" , "+mysql.escape('#ffffff')+" , "+mysql.escape((rows[0].flags).replace(/True/g, "False"))+" , "+mysql.escape((rows[0].trivia).replace(/True/g, "False"))+" , 4 , '', '')");
+                                        mysql_commit("INSERT into users (name, hash, avatarurl, avatarcolor, flags, trivia, vmresets, cookie, cookieexp) VALUES ("+mysql.escape(req.body.name)+" , "+mysql.escape(md5(hash))+" , "+mysql.escape('static.js?file=question-mark.png')+" , "+mysql.escape('#ffffff')+" , "+mysql.escape((rows[0].flags).replace(/True/g, "False"))+" , "+mysql.escape((rows[0].trivia).replace(/True/g, "False"))+" , 4 , '', '')");
                                         res.send('The user "'+req.body.name+'" with password "'+hash+'" has been created!');
                                     });
                                 }
