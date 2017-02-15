@@ -27,7 +27,7 @@ Made with node v6.9.1 and tested in Windows 7 / 8</br>
 
 #INSTALLATION
 1. Download JUST the file name NODE_CTFv1-3_fin.7z located in this repo.</br>
-2. Unzip it</br>
+2. Unzip it and move the node_modules dir to the root with app.js</br>
 4. Change lines 42-45 with your database info</br>
 5. run it using "node app.js"</br>
 6. That should be it!</br>
