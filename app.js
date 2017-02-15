@@ -1012,7 +1012,7 @@ if (cluster.isMaster) {
                 } else if (req.body.deleteuser && req.body.deleteuser !== 'admin') {
                     adminChecker(req.cookies.SCORE, function(truefalse){
                         if (truefalse) {
-                            mysql_commit("DELETE FROM USERS WHERE name = " + mysql.escape(req.body.deleteuser));
+                            mysql_commit("DELETE FROM users WHERE name = " + mysql.escape(req.body.deleteuser));
                             res.send('The user has been deleted!');
                         } else {
                             res.send('Denied');
