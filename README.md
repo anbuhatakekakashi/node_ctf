@@ -26,7 +26,7 @@ Made with node v6.9.1 and tested in Windows 7 / 8</br>
 3. run "node app.js"</br>
 
 #INSTALLATION
-1. Download JUST the file name NODE_CTFv1-3_fin.7z located in this repo.</br>
+
 
 
 #IMPORTANT
