@@ -26,7 +26,9 @@ Made with node v6.9.1 and tested in Windows 7 / 8</br>
 3. run "node app.js"</br>
 
 #INSTALLATION
-
+1. git clone https://github.com/chrisjd20/node_ctf.git</br>
+2. npm install</br>
+3. node app.js    <----- This starts the server</br>
 
 
 #IMPORTANT
