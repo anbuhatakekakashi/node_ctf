@@ -31,7 +31,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');                                              //used for managing cookies
 var bodyParser = require('body-parser');                                                  //used for collection POST requests
 var fs = require('fs');
-var base64 = require('./node_modules/base64');
+var base64 = require('base-64');
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

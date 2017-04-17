@@ -1,0 +1,27 @@
+{
+  "name": "node_ctf",
+  "version": "1.0.0",
+  "description": "![Alt text](https://github.com/chrisjd20/node_ctf/blob/master/optional/new.gif?raw=true \"ScreenShot\")</br>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisjd20/node_ctf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisjd20/node_ctf/issues"
+  },
+  "homepage": "https://github.com/chrisjd20/node_ctf#readme",
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "md5": "^2.2.1",
+    "mysql": "^2.13.0"
+  }
+}
