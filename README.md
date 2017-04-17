@@ -28,7 +28,8 @@ Made with node v6.9.1 and tested in Windows 7 / 8</br>
 #INSTALLATION
 1. git clone https://github.com/chrisjd20/node_ctf.git</br>
 2. npm install</br>
-3. node app.js    <----- This starts the server</br>
+3. Change values on lines 44-50 to reflect your system and db info</br>
+4. node app.js    <----- This starts the server</br>
 
 
 #IMPORTANT
