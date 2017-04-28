@@ -215,7 +215,7 @@ if (cluster.isMaster) {
                         triggers += 1;
                     }
                     if (thejson[e].flag2 === "True") {
-                        total += parseInt(thejson[e].flag1points);
+                        total += parseInt(thejson[e].flag2points);
                         triggers += 1;
                     } else {
                         triggers += 1;
