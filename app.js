@@ -64,6 +64,7 @@ var pool      =    mysql.createPool({
     host     : dbhost,
     user     : dbuser,
     password : dbpass,
+    port	 : 5555,
     database : 'scoreboard',
     multipleStatements: true,
     debug    :  false
@@ -79,6 +80,7 @@ if (cluster.isMaster) {
     host: dbhost,
     user: dbuser,
     password: dbpass,
+    port	 : 5555,
     multipleStatements: true
     });
     try {
